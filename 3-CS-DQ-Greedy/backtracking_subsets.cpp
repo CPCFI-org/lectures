@@ -3,8 +3,6 @@
 #include<algorithm>
 using namespace std;
 
-#define MAXSUBSETS 100
-
 void printA(vector<int> a) {
     printf("{");
     for (int ai : a)
