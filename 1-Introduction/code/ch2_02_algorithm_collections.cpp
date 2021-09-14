@@ -26,6 +26,7 @@ int main() {
   vector<int>::iterator j;
 
   // sort descending with vector
+//   sort(v.begin(), v.end());
   sort(v.rbegin(), v.rend());        // example of using 'reverse iterator'
   for (vector<int>::iterator it = v.begin(); it != v.end(); it++)
     printf("%d ", *it);                     // access the value of iterator
@@ -64,7 +65,7 @@ int main() {
 
   // multi-field sorting example, suppose we have 4 ICPC teams
   team nus[4] = { {1, 1, 10}, 
-                  {2, 3, 60},
+                  {2, 3, 100},
                   {3, 1, 20},
                   {4, 3, 60} };
 
@@ -93,6 +94,7 @@ int main() {
   test.push_back(b);
   test.push_back(c);
   test.push_back(d);
+
   for (int i = 0; i < 4; i++)
     printf("value: %d, name1 = %s, name2 = %s\n", test[i].first,
     ((string)test[i].second.first).c_str(), ((string)test[i].second.second).c_str());
@@ -106,10 +108,23 @@ int main() {
   printf("==================\n");
 
   // binary search using lower bound
+  sort(arr, arr + 5);   
   pos = lower_bound(arr, arr + 5, 7);                              // found
   printf("%d\n", *pos);
+  sort(v.begin(), v.end());   
   j = lower_bound(v.begin(), v.end(), 7);
   printf("%d\n", *j);
+
+  /*
+  vector<int> a = {1, 3, 6, 10}
+  j = lower_bound(a.begin(), a.end(), 3)
+  1 3 6 10
+  j <- 3
+
+  k = upper_bound(a.begin(), a.end(), 3)
+  1 3 6 10
+  k <- 6
+  */
 
   pos = lower_bound(arr, arr + 5, 77);                         // not found
   if (pos - arr == 5) // arr is of size 5 -> 
@@ -120,15 +135,47 @@ int main() {
                       // thus, testing whether pos - arr == 5 blocks 
                       //   can detect this "not found" issue
     printf("77 not found\n");
-  j = lower_bound(v.begin(), v.end(), 77);
+  printf("==================\n");
+  for (vector<int>::iterator it = v.begin(); it != v.end(); it++)
+    printf("%d ", *it);                     // access the value of iterator
+  printf("\n");
+  j = lower_bound(v.begin(), v.end(), 200);
   if (j == v.end()) // with vector, lower_bound will do the same:
                     //   return vector index +1 of vector size
                     // but this is exactly the position of vector.end()
                     //   so we can test "not found" this way
-    printf("77 not found\n");
+    printf("200 not found\n");
+  j = lower_bound(v.begin(), v.end(), 0);
+  if (j == v.begin())
+    printf("0 not found\n");
+
+  int intermediateValue = 7;
+  j = lower_bound(v.begin(), v.end(), intermediateValue);
+  int idx = j-v.begin();
+  printf("%d should be at index %d\n", intermediateValue, idx);
+
+  if (v[idx] == intermediateValue)
+    printf("%d is in vector v\n", intermediateValue);
+  else
+   printf("%d is NOT in vector v\n", intermediateValue);
+  
+  
   printf("==================\n");
 
   // useful if you want to generate permutations of set
+
+    /*
+      1 2 3
+
+      1,2,3
+      1,3,2
+      2,1,3
+      2,3,1
+      3,1,2
+      3,2,1
+
+    */
+
   next_permutation(arr, arr + 5); // 2, 4, 7, 10, 15 -> 2, 4, 7, 15, 10
   next_permutation(arr, arr + 5); // 2, 4, 7, 15, 10 -> 2, 4, 10, 7, 15
   for (int i = 0; i < 5; i++)

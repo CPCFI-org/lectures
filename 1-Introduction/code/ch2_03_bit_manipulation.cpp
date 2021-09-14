@@ -5,8 +5,8 @@
 #include <stack>
 using namespace std;
 
-#define isOn(S, j) (S & (1 << j))
-#define setBit(S, j) (S |= (1 << j))
+#define isOn(S, j) (S & (1 << j)) // 100000 j=5; j=2 100
+#define setBit(S, j) (S |= (1 << j)) // S |= X ---> S = S | X
 #define clearBit(S, j) (S &= ~(1 << j))
 #define toggleBit(S, j) (S ^= (1 << j))
 #define lowBit(S) (S & (-S))
@@ -42,6 +42,8 @@ int main() {
   S = S << 1; printSet(S);
   S = S >> 2; printSet(S);
   S = S >> 1; printSet(S);
+  S = 10; printSet(S);
+  S = S << 5; printSet(S);
   printf("\n");
 
   printf("3. Set/turn on the 3-th item of the set\n");
@@ -75,22 +77,48 @@ int main() {
 
   printf("8. Turn on all bits in a set of size n = 6\n");
   setAll(S, 6); printSet(S);
+  /*
+    n = 6
+    1000000-1 = 0111111
+  */
   printf("\n");
 
   printf("9. Other tricks (not shown in the book)\n");
   printf("8 %c 4 = %d\n", '%', modulo(8, 4));
+  /*
+     1000
+   & 0011
+    -----
+     0000       
+  */
   printf("7 %c 4 = %d\n", '%', modulo(7, 4));
   printf("6 %c 4 = %d\n", '%', modulo(6, 4));
   printf("5 %c 4 = %d\n", '%', modulo(5, 4));
   printf("is %d power of two? %d\n", 9, isPowerOfTwo(9));
   printf("is %d power of two? %d\n", 8, isPowerOfTwo(8));
+  /*
+    n = 9
+    1001
+   &1000
+   -----
+    !(1000) = 0
+
+    1000
+   &0111
+   -----
+    !(0000) = 1
+
+
+  */
   printf("is %d power of two? %d\n", 7, isPowerOfTwo(7));
   for (int i = 0; i <= 16; i++)
     printf("Nearest power of two of %d is %d\n", i, nearestPowerOfTwo(i));
+
   printf("S = %d, turn off last bit in S, S = %d\n", 40, turnOffLastBit(40));
   printf("S = %d, turn on last zero in S, S = %d\n", 41, turnOnLastZero(41));
   printf("S = %d, turn off last consectuve bits in S, S = %d\n", 39, turnOffLastConsecutiveBits(39));
   printf("S = %d, turn on last consecutive zeroes in S, S = %d\n", 36, turnOnLastConsecutiveZeroes(36));
+  printSet(36); printSet(turnOnLastConsecutiveZeroes(36));
 
   return 0;
 }
