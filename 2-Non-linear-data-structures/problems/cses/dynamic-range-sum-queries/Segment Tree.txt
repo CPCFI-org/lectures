@@ -1,0 +1,126 @@
+Segment Tree:
+    1. build()
+        - O(N)
+    2. rsq() <- obtener la respuesta a nuestro problema (sum, min, max)
+        - O(log N)
+    3. update(k, u)
+        - O(log N)
+
+--------------------------------------------------
+
+A = [3 2 4 5 1 1 5 3]
+|A| = 8
+
+       24 
+   14      10
+ 5   9   2   8  
+3 2 4 5 1 1 5 3
+
+
+k = 5
+u = 10
+A[5] = 10
+ST[5+n] = 10
+
+A = [3 2 4 5 1 10 5 3]
+
+
+       33
+   14      19
+ 5   9   11   8  
+3 2 4 5 1 10 5 3
+
+---> ¿Cuál es la altura del árbol ST sabiendo que tiene N nodos?
+---> log N
+
+--------------------------------------------------
+// Recursiva (sum, minimum queries)
+st[n] = st[left] + st[right]
+st[n] = min(st[left], st[right])
+
+// Iterativa |A|_final debería ser una potencia de dos
+n = |A|
+while (__builtin_popcount != 1) {
+    n++
+}
+
+
+
+A = [3 2 4 5 1 1 5 3]
+     0 1 2 3 4 5 6 7
+n = 8
+
+       24
+   14      10
+ 5   9   2   8  
+3 2 4 5 1 1 5 3
+
+
+ST = [-1, 24, 14, 10, 5, 9, 2, 8 , 3, 2, 4, 5, 1, 1, 5 , 3]
+          1   2   3   4  5  6  7   8  9  10 11 12 13 14 15
+
+Query ------------->   rsq(3, 5) es sobre el arreglo A
+Parámetros--------->   L = 0, R = 7, i = 3, j = 5, node = 1
+Función activadora >   T(node, i, j, L, R)
+
+
+1. if (i <= L && j >= R) return ST[node]
+2. if (R < i || L > j) return 0
+3. return T(2*node, i, j, L, (L+R)/2) + T(2*node+1, i, j, (L+R)/2 + 1 , R)
+
+
+RAIZ
+node = 24       -->  [0,7] ----------------------------> node_idx = 1
+
+
+HIJO IZQUIERDO RAIZ
+node_left = 14  -->  [0,3] ----------------------------> node_idx = 2
+
+    node_left_left = 5 --> [0,1] return 0 --------------------> node_idx = 4
+
+    node_left_right = 9 -> [2,3]        ----------------------> node_idx = 5
+        node_left_right_left = 4 --> [2,2] --> L=2, R=2, i=3, j=5 --> 0                  node_idx = 10
+        node_left_right_right = 5 -> [3,3] --> L=3, R=3, i=3, j=5 --> return ST[9] = 5   node_idx = 11
+
+                    
+HIJO DERECHO RAIZ
+node_right = 10 -->  [4,7] ----------------------------> node_idx = 3
+    node_right_left = 2 ---> [4,5] --------------------> node_idx = 6 --> return ST[6] = 2
+    node_right_right = 8 --> [6,7] --------------------> node_idx = 7 --> return 0
+
+
+
+
+
+
+//Pseudocódigo
+get_things_for_child(node, child, L, R) {
+
+    child_idx = -1
+    child_minimum_idx = -1
+    child_max_idx = -1
+
+    if child == "left" {
+        child_idx = node*2
+        child_min_idx = L
+        child_max_idx = (L+R)/2
+
+    } else { //right
+
+        child_idx = node*2 + 1
+        child_min_idx = (L+R)/2 + 1 
+        child_max_idx = R
+
+    }
+
+    return (child_idx, child_min_idx, child_max_idx)
+}
+
+
+
+
+
+i=2
+j=
+
+[0,3] L=0, R=3

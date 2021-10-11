@@ -39,6 +39,7 @@ void debug(vector<int> A) {
 // Here begins our solution
 // -----------------------------------------------------------------------------
 
+
 vector<long long> A;
 vector<long long> ST;
 
@@ -47,15 +48,15 @@ void build(int n) { // O(n)
         ST[i] = A[i-n];
     }
     for (int i = n-1; i >= 1; i--) {
-        ST[i] = ST[2*i] +  ST[2*i+1];
+        ST[i] = ST[2*i] + ST[2*i+1];
     }
 }
 
 long long T(int node, int i, int j, int L, int R) {
-    if (L > j || R < i) return 0; //RMaxQ
-    if (L >= i && R <= j) return ST[node];
+    if (L > j || R < i) return 0; //RMaxQ 1. 
+    if (L >= i && R <= j) return ST[node]; // 2. 
     int M = (L+R)/2;
-    return T(node*2, i, j, L, M) +  T(node*2+1, i, j, M+1, R);
+    return T(node*2, i, j, L, M) +  T(node*2+1, i, j, M+1, R); // 3.
 }
 
 void solve() {
