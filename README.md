@@ -49,7 +49,9 @@ Here are the topics we cover (sort of) throughout an entire year:
    - Because we can and want :cowboy_hat_face:
 
 ---
+
 At this point, we run our annual **Winter Programming Contest** :snowman_with_snow: and the contest is open for everyone and hopefully, if we can keep down low inflationary rates, winning teams can be awarded some nice prizes :gift:
+
 ---
 
 6. **Graphs I**
