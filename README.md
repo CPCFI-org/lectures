@@ -89,7 +89,7 @@ CPCFI's is constantly looking for new members, if any of the past lines made any
 1. You are bored at you current university lectures :sleeping:
 2. Want to learn about a ```double ended queue``` or a ```Fenwick Tree``` :new_moon_with_face:
 3. You have the frustrated dream of becoming a professional soccer player but still want to compete at an international level in [ACM ICPC](https://icpc.global/) representing your university :earth_americas: :earth_africa: :earth_asia:
-4. Want to work with meet some of the smartest people :nerd_face: *
+4. Want to work and meet some of the smartest people :nerd_face: *
 
 We accept new applicants every year (fall semester). Please keep an eye for our new poster with deadlines and details. Here is our latest poster: 
 
