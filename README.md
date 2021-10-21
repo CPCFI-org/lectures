@@ -2,6 +2,9 @@
 
 ¡Welcome to CPCFI 👋! ~ UNAM's School of Engineering Competitive Programming Club
 
+<img src="./images/logo.PNG" alt="CPCFI Logo" width="200"/>
+
+
 We're a bunch of nerds that:
 
 - Spend most of their time solving unsolvable problems :sunglasses:
@@ -18,7 +21,11 @@ We're a bunch of nerds that:
 - ... solve more problems ...
 - And, compete at [ACM ICPC](https://icpc.global/), the equivalent of the Super Bowl or FIFA World Cup of competitive programming
 
-Here is a bunch of pictures
+## Meet us
+
+Check out this cool photo of our **first generation**
+
+
 
 
 ## Contact
