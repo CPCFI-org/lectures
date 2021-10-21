@@ -19,7 +19,8 @@ We're a bunch of nerds that:
 - Solve, solve and solve competitive programming problems
 - Wondering why [UVa](https://onlinejudge.org/) shuts down between 20:00-22:00 and thinking of maybe coming back to [Codeforces](https://codeforces.com/)
 - ... solve more problems ...
-- And, compete at [ACM ICPC](https://icpc.global/), the equivalent of the Super Bowl or FIFA World Cup of competitive programming
+- Ponder about using ```printf``` or ```cout``` although we know ```printf``` is faster but still, takes an awful amount of time to write
+- And, (**seriously this time**) compete at [ACM ICPC](https://icpc.global/), the equivalent of the Super Bowl or FIFA World Cup of competitive programming
 
 ## Meet us
 
