@@ -38,26 +38,26 @@ And, here is the list of our **first generation** members:
 
 Here are the topics we cover (sort of) throughout an entire year: 
 
-1. Introduction to Competitive Programming
-2. Data Structures
+1. **Introduction to Competitive Programming**
+2. **Data Structures**
    - Here we cover our famous ```double ended queue```
    - and even ```Fenwick Tree```
-3. Strategies to build algorithms
+3. **Strategies to build algorithms**
    - Be ready for some Backtracking
-4. Dynamic Programming I
-5. Dynamic Programming II
+4. **Dynamic Programming I**
+5. **Dynamic Programming II**
    - Because we can and want :cowboy_hat_face:
 
 At this point, we run our annual **Winter Programming Contest** :snowman_with_snow: and the contest is open for everyone and hopefully, if we can keep down low inflationary rates, winning teams can be awarded some nice prizes :gift:
 
-6. Graphs I
+6. **Graphs I**
    - How does Dijkstra's algorithm sounds? (because everyone knows DFS and BFS aleady :yawning_face:)
 7. Graphs II
    - Or some Ford-Fulkerson? :thinking:
-8. Math for Competitive Programming
+8. **Math for Competitive Programming**
    - Just so our sisters and brothers from UNAM's School of Science don't get bored
-9. String Processing and Computational Geometry
-10. Advanced Topics in Competitive Programming
+9. **String Processing and Computational Geometry**
+10. **Advanced Topics in Competitive Programming**
     - Ever heard of the Sprague-Grundy theorem? :zombie: (maybe a really bad reference to this [Batman's supervillain](https://batman.fandom.com/wiki/Solomon_Grundy))
 
 If you hate emojis, check our full syllabus [here]()
