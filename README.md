@@ -48,7 +48,9 @@ Here are the topics we cover (sort of) throughout an entire year:
 5. **Dynamic Programming II**
    - Because we can and want :cowboy_hat_face:
 
+---
 At this point, we run our annual **Winter Programming Contest** :snowman_with_snow: and the contest is open for everyone and hopefully, if we can keep down low inflationary rates, winning teams can be awarded some nice prizes :gift:
+---
 
 6. **Graphs I**
    - How does Dijkstra's algorithm sounds? (because everyone knows DFS and BFS aleady :yawning_face:)
@@ -57,6 +59,7 @@ At this point, we run our annual **Winter Programming Contest** :snowman_with_sn
 8. **Math for Competitive Programming**
    - Just so our sisters and brothers from UNAM's School of Science don't get bored
 9. **String Processing and Computational Geometry**
+   -  Couldn't find any cool description here ... sorry !
 10. **Advanced Topics in Competitive Programming**
     - Ever heard of the Sprague-Grundy theorem? :zombie: (maybe a really bad reference to this [Batman's supervillain](https://batman.fandom.com/wiki/Solomon_Grundy))
 
