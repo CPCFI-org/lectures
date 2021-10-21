@@ -26,8 +26,6 @@ We're a bunch of nerds that:
 Check out this cool photo of our **first generation**
 
 
-
-
 ## Contact
 
 Feel free to reach out to us if you have any questions, we'll be glad to answer.
@@ -35,6 +33,7 @@ Specifically if you have any of the following questions:
     
 - Why can't I use brute force for any problem? :weary:
 - VSCode, Sublime or vim? :stuck_out_tongue_closed_eyes:
+- But please, don't email us if you need help with your homework. Nah, we're just kidding, we could solve your CS homework quite fast if you are willing to spend some BTC :money_with_wings:
 - Or, who is John Galt? :flushed:
 
 Email: cpcfi.unam@gmail.com
