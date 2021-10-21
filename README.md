@@ -10,11 +10,15 @@ We're a bunch of nerds that:
 
 **No, really, what do we do?**
 
-- Study algorithms and data structures (even a ```double ended queue```) to solve computer programming problems as fast as possible
+- Study algorithms and data structures (even a ```double ended queue```) to solve computer programming problems as fast as possible. How fast?
+  - Well, about 12-13 problems in 5 hours
+  - Check out [this problemset](https://codeforces.com/blog/entry/71296) if you want get an idea
 - Solve, solve and solve competitive programming problems
 - Wondering why [UVa](https://onlinejudge.org/) shuts down between 20:00-22:00 and thinking of maybe coming back to [Codeforces](https://codeforces.com/)
 - ... solve more problems ...
-- And, compete at [ACM ICPC](https://icpc.global/) the equivalent of the Super Bowl or FIFA World Cup of competitive programming
+- And, compete at [ACM ICPC](https://icpc.global/), the equivalent of the Super Bowl or FIFA World Cup of competitive programming
+
+Here is a bunch of pictures
 
 
 ## Contact
