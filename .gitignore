@@ -1,5 +1,7 @@
 temp/*
 
+.vscode/*
+
 # Prerequisites
 *.d
 
