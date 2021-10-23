@@ -102,45 +102,59 @@ void print(vector<T>& vec, int a=0, int b=-1){
 // Solution starts here
 // -----------------------------------------------------------------------------
 int m, n, k;
-const int MAXN = 1010;
+const int MAXN = 1001;
 vi P(MAXN);
 
 struct circle {
     ll x, y, r;
 } sensors[MAXN];
 
-int find(int x) {
-    return P[x] == x ? x : P[x] = find(P[x]);
+int findParent(int x) {
+    return P[x] == x ? x : P[x] = findParent(P[x]);
 }
 
 bool check_corners(circle c1, circle c2) {
-    if (c1.x-c1.r > 0 && c1.y+c1.r < n) return false;
-    if (c2.x+c2.r < m && c2.y-c2.r > 0) return false;
+    if (c1.x - c1.r > 0 && c1.y+c1.r < n) return false;
+    if (c2.x + c2.r < m && c2.y - c2.r > 0) return false;
     return true;
 }
 
+
+bool circles_intersect(circle c1, circle c2) {
+    ll d = pow(c1.x-c2.x, 2) + pow(c1.y-c2.y, 2);
+    return d <= pow(c1.r, 2) + pow(c2.r, 2) + 2*c1.r*c2.r;
+}
 
 
 void solve() {
     si(n); si(m); si(k);
     FOR(i, 1, k+1) {
-        scanf("%lld%lld%lld", &sensors[i].x, &sensors[i].r, &sensors[i].r);
-        // declaracion inicial de la grafica
-        P[i] = i;
+        scanf("%lld%lld%lld", &sensors[i].x, &sensors[i].y, &sensors[i].r);
+        P[i] = i; //Parents
     }
 
     FOR(i, 1, k+1) {
         FOR(j, 1, k+1) {
             if (circles_intersect(sensors[i], sensors[j])) {
-                int pc1 = find(i);
-                int pc2 = find(j);
+                int pc1 = findParent(i);
+                int pc2 = findParent(j);
                 // Union
                 if (pc1 != pc2) P[pc1] = pc2;
             }
         }
-    }    
+    }
 
-
+    bool cuts = false;
+    FOR(i, 1, k+1) {
+        FOR(j, 1, k+1) {
+            circle c1 = sensors[i];
+            circle c2 = sensors[j];
+            if (check_corners(c1, c2) && P[i] == P[j]){
+                cuts = true;
+            }
+        }
+    }
+    cuts ? cout << "N\n" : cout << "S\n";
     return;
 }
 
