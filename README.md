@@ -34,6 +34,7 @@ And, here is the list of our **first generation** members:
 |Name|Github :octocat: |Birthday|Zodiac Sign|Owns any crypto?|
 |----|------|--------|----------------|-----|
 |Aldo|[@aldonavarreetefp](https://github.com/aldonavarretefp)|20 Maz|||
+|Diego|[@xDiegoNunezx](https://github.com/xDiegoNunezx)|23 dic|:capricornio:||
 
 ## The Boring Stuff 
 
