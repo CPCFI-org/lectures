@@ -36,6 +36,7 @@ And, here is the list of our **first generation** members:
 |Aldo|[@aldonavarreetefp](https://github.com/aldonavarretefp)|20 Maz|||
 |Diego|[@xDiegoNunezx](https://github.com/xDiegoNunezx)|23 dic|:capricorn:||
 |Bryan|[@bryanv07](https://github.com/bryanv07)|07 nov|:scorpius:|||
+|Rodolfo Santiago|[@Rodolfo-Santiago](https://github.com/Rodolfo-Santiago)|28 oct|♏||
 
 ## The Boring Stuff 
 
