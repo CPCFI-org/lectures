@@ -1,0 +1,10 @@
+backtrack(A):
+    if A is solution:
+        print A
+        return
+        
+    C <- generateCandidatesFrom(A)
+    for candidate in C:
+        add candidate to A
+        backtrack(A)
+        remove candidate from A
