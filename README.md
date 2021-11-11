@@ -26,17 +26,7 @@ We're a bunch of nerds that:
 
 Check out this cool photo of our **first generation**
 
-:warning: Still waiting for everyone to agree on a photo in which they don't close their eyes :warning:
-
---- 
-And, here is the list of our **first generation** members: 
-
-|Name|Github :octocat: |Birthday|Zodiac Sign|Owns any crypto?|
-|----|------|--------|----------------|-----|
-|Aldo|[@aldonavarreetefp](https://github.com/aldonavarretefp)|20 Maz|||
-|Diego|[@xDiegoNunezx](https://github.com/xDiegoNunezx)|23 dic|:capricorn:||
-|Bryan|[@bryanv07](https://github.com/bryanv07)|07 nov|:scorpius:|||
-|Rodolfo Santiago|[@Rodolfo-Santiago](https://github.com/Rodolfo-Santiago)|28 oct|♏||
+<img title="CPCFI First Generation" alt="CPCFI First Generation" src="/images/CPCFI_FirstGen.jpg" width=350>
 
 ## The Boring Stuff 
 
