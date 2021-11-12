@@ -26,14 +26,7 @@ We're a bunch of nerds that:
 
 Check out this cool photo of our **first generation**
 
-:warning: Still waiting for everyone to agree on a photo in which they don't close their eyes :warning:
-
---- 
-And, here is the list of our **first generation** members: 
-
-|Name|Github :octocat: |Birthday|Zodiac Sign|Owns any crypto?|
-|----|------|--------|----------------|-----|
-
+<img title="CPCFI First Generation" alt="CPCFI First Generation" src="/images/CPCFI_FirstGen.jpg" width=350>
 
 ## The Boring Stuff 
 

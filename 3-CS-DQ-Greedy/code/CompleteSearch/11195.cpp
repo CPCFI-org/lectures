@@ -5,16 +5,20 @@
 #include <bitset>
 using namespace std;
 
+int board[8][8];
 int row[8], TC, a, b, lineCounter, n, ans;
 bitset<30> rw, ld, rd; // for the largest n = 14, we have 27 diagonals
 
-void backtrack(int c) {
-    if (c == n) { ans++; return; }
-    for (int r = 0; r < n; r++) {
+void backtrack(int c) { // c <- column
+    if (c == n) { 
+        ans++; 
+        return; 
+    }
+    for (int r = 0; r < n; r++) { // r <- row
         if (board[r][c] != '*' && !rw[r] && !ld[r-c+n+1] && !rd[r+c]) {
             rw[r] = ld[r-c+n+1] = rd[r+c] = true;
             backtrack(c+1);
-            rw[r] = ld[r-c+n+1] = rd[r+c] = true;
+            rw[r] = ld[r-c+n+1] = rd[r+c] = false;
         }
     }
 }
