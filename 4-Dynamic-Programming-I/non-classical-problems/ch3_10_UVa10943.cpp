@@ -38,14 +38,21 @@ int main() {
 #include <cstring>
 using namespace std;
 
+/*
+Given an integer n, how many ways can K non-negative integers
+less than or equal to n add up to n? Constraints: 1 ≤n,K ≤100
+*/
+
 int main() {
   int i, j, split, dp[110][110], N, K;
 
   memset(dp, 0, sizeof dp);
 
+  // Base case: ways(n, 1) = 1
   for (i = 0; i <= 100; i++) // these are the base cases
     dp[i][1] = 1;
 
+  // General case: ways(n, k) = \sum_{X=0}^{n} = ways(n - X, K - 1)
   for (j = 1; j < 100; j++) // these three nested loops form the correct topological order
     for (i = 0; i <= 100; i++)
       for (split = 0; split <= 100 - i; split++) {
@@ -55,6 +62,6 @@ int main() {
 
   while (scanf("%d %d", &N, &K), (N || K))
     printf("%d\n", dp[N][K]);
-
+    
   return 0;
 }
