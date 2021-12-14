@@ -8,6 +8,16 @@ using namespace std;
 int main() {
   int i, j, c, t, h, f, a, n, acorn[2010][2010], dp[2010];
 
+  /*
+    Input
+    1 --> num of test cases 
+    3 10 2 --> t, h, f
+    3 1 4 10
+    6 3 5 7 8 9 9
+    5 3 4 5 6 9
+    0
+  */
+
   scanf("%d", &c);
   while (c--) {
     scanf("%d %d %d", &t, &h, &f);
@@ -22,16 +32,19 @@ int main() {
 
     for (int tree = 0; tree < t; tree++) // initialization
       dp[h] = max(dp[h], acorn[tree][h]);
-    for (int height = h - 1; height >= 0; height--)
+
+    for (int height = h - 1; height >= 0; height--) {
       for (int tree = 0; tree < t; tree++) {
-        acorn[tree][height] +=
-          max(acorn[tree][height + 1], // from this tree, +1 above
-          ((height + f <= h) ? dp[height + f] : 0)); // best from tree at height + f
-        dp[height] = max(dp[height], acorn[tree][height]); // update this too
+        acorn[tree][height] += max(
+            acorn[tree][height + 1], // coming from the current tree
+            ((height + f <= h) ? dp[height + f] : 0) // coming from another tree
+        );
+        
+        dp[height] = max(dp[height], acorn[tree][height]);
       }
+    }
     printf("%d\n", dp[0]); // solution will be here
   }
-  // ignore the last number 0
 
   return 0;
 }
