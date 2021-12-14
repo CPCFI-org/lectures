@@ -19,11 +19,11 @@ In this unit we'll see basic and intermediate concepts regarding Graph Theory. F
 
 **CP Algorithms**:
 
-- Strong Orientation
-- Edge Connectiviy / Vertex Connectivity
-- Tree painting
-- 2-SAT
-- Heavy-light decomposition
+- [Strong Orientation](https://cp-algorithms.com/graph/strong-orientation.html)
+- [Edge Connectiviy / Vertex Connectivity](https://cp-algorithms.com/graph/edge_vertex_connectivity.html)
+- [Tree painting](https://cp-algorithms.com/graph/tree_painting.html)
+- [2-SAT](https://cp-algorithms.com/graph/2SAT.html)
+- [Heavy-light decomposition](https://cp-algorithms.com/graph/hld.html)
 
 ## References
 
