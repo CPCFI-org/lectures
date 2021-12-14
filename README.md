@@ -28,9 +28,9 @@ Check out this cool photo of our **first generation**
 
 <img title="CPCFI First Generation" alt="CPCFI First Generation" src="/images/CPCFI_FirstGen.jpg" width=350>
 
-## The Boring Stuff 
+## The Boring Stuff
 
-Here are the topics we cover (sort of) throughout an entire year: 
+Here are the topics we cover (sort of) throughout an entire year:
 
 1. **Introduction to Competitive Programming**
 2. **Data Structures**
@@ -44,7 +44,7 @@ Here are the topics we cover (sort of) throughout an entire year:
 
 ---
 
-At this point, we run our annual **Winter Programming Contest** :snowman_with_snow: 
+At this point, we run our annual **Winter Programming Contest** :snowman_with_snow:
 
 - The contest is open for everyone and ...
 - Hopefully, if we can keep down low inflationary rates :chart_with_downwards_trend: winning teams can be awarded some nice prizes :gift:
@@ -62,13 +62,13 @@ At this point, we run our annual **Winter Programming Contest** :snowman_with_sn
 5.  **Advanced Topics in Competitive Programming**
     - Ever heard of the Sprague-Grundy theorem? :zombie: (maybe a really bad reference to this [Batman's supervillain](https://batman.fandom.com/wiki/Solomon_Grundy))
 
-If you hate emojis, check our full syllabus [here]()
+If you hate emojis, check our full syllabus [here](https://github.com/CPCFI-org/lectures/blob/main/CPCFI%20-%20Syllabus.pdf)
 
 ## Contact
 
 Feel free to reach out to us if you have any questions, we'll be glad to answer.
 Specifically if you have any of the following questions:
-    
+
 - Why can't I use brute force for any problem? :weary:
 - VSCode, Sublime or vim? :stuck_out_tongue_closed_eyes:
 - But please, don't email us if you need help with your homework. Nah, we're just kidding, we could solve your CS homework quite fast if you are willing to spend some BTC :money_with_wings:
@@ -80,19 +80,19 @@ Webpage: http://www.cpcfi.unam.mx/
 
 ## New applicants
 
-CPCFI's is constantly looking for new members, if any of the past lines made any sense to you or you meet any of the following criteria: 
+CPCFI's is constantly looking for new members, if any of the past lines made any sense to you or you meet any of the following criteria:
 
 1. You are bored at you current university lectures :sleeping:
 2. Want to learn about a ```double ended queue``` or a ```Fenwick Tree``` :new_moon_with_face:
 3. You have the frustrated dream of becoming a professional soccer player but still want to compete at an international level in [ACM ICPC](https://icpc.global/) representing your university :earth_americas: :earth_africa: :earth_asia:
 4. Want to work and meet some of the smartest people :nerd_face: *
 
-We accept new applicants every year (fall semester). Please keep an eye for our new poster with deadlines and details. Here is our latest poster: 
+We accept new applicants every year (fall semester). Please keep an eye for our new poster with deadlines and details. Here is our latest poster:
 
 <img src="./images/Posters/FirstGen_Invitation.png" alt="CPCFI Logo">
 
 
-\***Note**: currently :disappointed_relieved:, we can only accept students enrolled at any of the National Autonomous University of Mexico's schools, faculties or institutes and be at most, third year student 
+\***Note**: currently :disappointed_relieved:, we can only accept students enrolled at any of the National Autonomous University of Mexico's schools, faculties or institutes and be at most, third year student
 
 ## References
 - [Supplementary code](https://sites.google.com/site/stevenhalim/home/material)
