@@ -14,4 +14,3 @@
 | Unit 8  | Mathematics  | [here](https://github.com/CPCFI-org/lectures/tree/main/8-Mathematics)  |
 | Unit 9  | Strings Processing and Computational Geometry  | [here](https://github.com/CPCFI-org/lectures/tree/main/9-String-Processing-And-Computational-Geometry)  |
 | Unit 10 | Advanced Topics  | [here](https://github.com/CPCFI-org/lectures/tree/main/10-Advanced-Topics)  |
-o
