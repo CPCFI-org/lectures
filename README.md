@@ -1,6 +1,6 @@
 # CPCFI
 
-¡Welcome to CPCFI 👋! ~ UNAM's School of Engineering Competitive Programming Club
+¡Welcome to [CPCFI](http://www.cpcfi.unam.mx/) 👋! ~ UNAM's School of Engineering Competitive Programming Club
 
 <img src="./images/logo.PNG" alt="CPCFI Logo" width="225"/>
 
@@ -75,6 +75,8 @@ Specifically if you have any of the following questions:
 - Or, who is John Galt? :flushed:
 
 Email: cpcfi.unam@gmail.com
+
+Webpage: http://www.cpcfi.unam.mx/
 
 ## New applicants
 
