@@ -6,22 +6,13 @@ In this unit we'll see basic and intermediate concepts regarding Graph Theory. F
 
 ## Lectures
 
-|Lecture number|    Title               |
-|--------------|------------------------|
-| 1  |  Graph Traversal I               |
-| 2  |  Graph Traversal II              |
-| 3  |  Minimum Spanning Tree I         |
-| 4  |  Minimum Spanning Tree II        |
-| 5  |  Single-Source Shortest Paths I  |
-| 6  |  Single-Source Shortest Paths II |
+| Number | Lecture | Topics |
+| ------ | ------- | ------ |
+| 1  | Graph Traversal I  | DFS, BFS, Connected Components, Coloring Connected Components, Strongly Connected Components  |
+| 2  | Graph Traversal II | Articulation Points, Bridges  |
 
 
-1. Graph Traversal
-   1. DFS and BFS algorithms
-   2. Finding Connected Components and Flood Fill - Labeling/Coloring Connected Components
-   3. Finding Bridges and finding bridges online
-   4. Finding Articulation Points
-   5. Finding Strongly Connected Components, Strong Orientation
-   6. Topological Sort
-2. Minimum Spanning Tree
-3. Single-Soure Shortest Paths
+## References
+
+- [Competitive Programming 3](https://www.amazon.com/Competitive-Programming-3rd-Steven-Halim/dp/B00FG8MNN8), Steven and Felix Halim
+- [CP-Algorithms Graphs section](https://cp-algorithms.com/)
