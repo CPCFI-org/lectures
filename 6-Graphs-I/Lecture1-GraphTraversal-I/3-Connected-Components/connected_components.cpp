@@ -42,9 +42,11 @@ using n_type = int;
 vector<vector<n_type>> adj(MAXN); // zero-based
 vector<bool> visited(MAXN);
 vector<vector<n_type>> cc; // connected components
+vector<n_type> component;
 
 void dfs(n_type u) {
     visited[u] = true;
+    component.push_back(u);
     for (auto v : adj[u]) {
         if (!visited[v]) {
             visited[v] = true;
@@ -57,16 +59,13 @@ void find_cc(int num_of_nodes) {
     for(int i = 0; i < num_of_nodes; i++) {
         visited[i] = false;
     }
-    vector<n_type> component;
     for (int i = 0; i < num_of_nodes; i++) {
         if (!visited[i]) {
-            if (component.size() > 0) cc.push_back(component);
             component.clear();
             dfs(i);
+            cc.push_back(component);
         }
-        component.push_back(i);
     }
-    cc.push_back(component);
 }
 
 
