@@ -1,5 +1,7 @@
 # Graph Traversal I
 
+List of problems per topic:
+
 - **6.1.1 BFS**:
 - **6.1.2 DFS**:
 - **6.1.3 Connected Components**:
