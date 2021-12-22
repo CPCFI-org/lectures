@@ -3,6 +3,7 @@
 List of problems per topic:
 
 - **6.1.1 BFS**:
+  - [CSES Message Route](https://cses.fi/problemset/task/1667/), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/message-route)
 - **6.1.2 DFS**:
 - **6.1.3 Connected Components**:
   - [CSES Building Roads](https://cses.fi/problemset/task/1666), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/building-roads)
