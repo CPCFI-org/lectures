@@ -12,4 +12,4 @@ Problems per topic:
 | [CSES - Course Schedule](https://cses.fi/problemset/task/1679)  | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/course-schedule)  | 6.1.5 Topological Sort |
 |  [CSES Round Trip](https://cses.fi/problemset/task/1669) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/round-trip)  | Background: acyclicity |
 |  [CSES Round Trip II](https://cses.fi/problemset/task/1678/) |   |  Background: acyclicity |
-| [CSES Building Teams](https://cses.fi/problemset/task/1668/) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/building-teams) | 6.1.6 Bipartite Graph Check | 
+| [CSES Building Teams](https://cses.fi/problemset/task/1668/) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/building-teams) | 6.1.6 Bipartite Graph Check | 
