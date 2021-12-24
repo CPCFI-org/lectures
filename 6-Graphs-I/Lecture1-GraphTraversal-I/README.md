@@ -14,6 +14,6 @@ List of problems per topic:
 - **6.1.5 Topological Sort**
   - [CSES - Course Schedule](https://cses.fi/problemset/task/1679), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/course-schedule)
   - **Background**: Checking for acyclicity
-    - [CSES Round Trip](https://cses.fi/problemset/task/1669)
+    - [CSES Round Trip](https://cses.fi/problemset/task/1669), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/round-trip)
     - [CSES Round Trip II](https://cses.fi/problemset/task/1678/)
 - **6.1.6 Bipartite Graph Check**
