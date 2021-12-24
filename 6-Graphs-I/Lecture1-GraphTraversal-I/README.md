@@ -1,6 +1,10 @@
 # Graph Traversal I
 
-List of problems per topic:
+Problems per topic:
+
+| Category | Problem | Editorial |
+| -------- | ------- | --------- |
+| BFS  | [CSES Counting Rooms](https://cses.fi/problemset/task/1192/)  |  [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/counting-rooms) |
 
 - **6.1.1 BFS**:
   - [CSES Counting Rooms](https://cses.fi/problemset/task/1192/), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/counting-rooms)
