@@ -4,7 +4,7 @@ Problems per topic:
 
 | Problem | Editorial | Tags |
 | ------- | --------- | ---- |
-| [CSES Counting Rooms](https://cses.fi/problemset/task/1192/)  | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/counting-rooms) | ==bfs== |
+| [CSES Counting Rooms](https://cses.fi/problemset/task/1192/)  | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/counting-rooms) | <font color="purple">bfs</font> |
 |  [CSES Message Route](https://cses.fi/problemset/task/1667/) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/message-route)  | ==bfs==  |
 |  [CSES Labyrinth](https://cses.fi/problemset/task/1193/) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/labyrinth)  | bfs |
 |  [CSES Building Roads](https://cses.fi/problemset/task/1666)  |  [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/building-roads) | connected-components  |
