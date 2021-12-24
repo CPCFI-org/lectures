@@ -13,4 +13,7 @@ List of problems per topic:
   - [UVa 469 - Wetlands of Florida](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=6&page=show_problem&problem=410), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/UVa/6-Graphs-I/florida-wetlands)
 - **6.1.5 Topological Sort**
   - [CSES - Course Schedule](https://cses.fi/problemset/task/1679), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/course-schedule)
+  - **Background**: Checking for acyclicity
+    - [CSES Round Trip](https://cses.fi/problemset/task/1669)
+    - [CSES Round Trip II](https://cses.fi/problemset/task/1678/)
 - **6.1.6 Bipartite Graph Check**
