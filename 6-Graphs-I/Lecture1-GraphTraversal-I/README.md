@@ -4,8 +4,8 @@ Problems per topic:
 
 | Problem | Editorial | Tags |
 | ------- | --------- | ---- |
-| [CSES Counting Rooms](https://cses.fi/problemset/task/1192/)  | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/counting-rooms) | <font color="purple">bfs</font> |
-|  [CSES Message Route](https://cses.fi/problemset/task/1667/) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/message-route)  | ==bfs==  |
+| [CSES Counting Rooms](https://cses.fi/problemset/task/1192/)  | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/counting-rooms) | bfs |
+|  [CSES Message Route](https://cses.fi/problemset/task/1667/) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/message-route)  | bfs |
 |  [CSES Labyrinth](https://cses.fi/problemset/task/1193/) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/labyrinth)  | bfs |
 |  [CSES Building Roads](https://cses.fi/problemset/task/1666)  |  [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/building-roads) | connected-components  |
 |  [UVa 469 - Wetlands of Florida](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=6&page=show_problem&problem=410) | [Editorial](https://github.com/nestorivanmo/icpc/tree/main/UVa/6-Graphs-I/florida-wetlands)  | flood-fill  |
