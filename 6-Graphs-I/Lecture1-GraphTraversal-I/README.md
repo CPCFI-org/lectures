@@ -17,3 +17,4 @@ List of problems per topic:
     - [CSES Round Trip](https://cses.fi/problemset/task/1669), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/round-trip)
     - [CSES Round Trip II](https://cses.fi/problemset/task/1678/)
 - **6.1.6 Bipartite Graph Check**
+  - [CSES Building Teams](https://cses.fi/problemset/task/1668/), [Editorial](https://github.com/nestorivanmo/icpc/tree/main/cses/4-Graphs/building-teams)
