@@ -3,7 +3,7 @@
 | Quick Access | Description |
 | ----------- | ----------- |
 | [C++ template](https://github.com/CPCFI-org/lectures/blob/main/cpcfi_template.cpp)  | Our competitive programming template suggestion |
-| [CPCFI's Syllabus](https://github.com/CPCFI-org/lectures/blob/main/CPCFI_Syllabus.pdf)  | Our competitive programming syllabus |
+| [CPCFI's Syllabus](https://github.com/CPCFI-org/lectures/blob/main/CPCFI_Syllabus.pdf)  | Check out the topics per unit we cover throuhout a year |
 | [Unit 1](https://github.com/CPCFI-org/lectures/tree/main/1-Introduction) | Introduction to Competitive Programming |
 | [Unit 2](https://github.com/CPCFI-org/lectures/tree/main/2-Non-linear-data-structures) | Non-Linear Data Structures |
 | [Unit 3](https://github.com/CPCFI-org/lectures/tree/main/3-CS-DQ-Greedy) | Complete Search, Divide & Conquer, Greedy |
