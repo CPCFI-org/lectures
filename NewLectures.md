@@ -2,6 +2,7 @@
 
 Please follow the next steps:
 
+0. Plan each lecture's topics according to CPCFI's Syllabus using **Lecture Planner Template** table. This table should be at the Unit Root Directory
 1. Within the unit directory, create a new directory with the following template name: ```Lecture-#-New-Lecture-Name```
    1. ```#```: corresponds to the new lecture number
    2. ```New-Lecture-Name```: use hyphens (-) if the lecture name contains whitespaces
@@ -20,11 +21,25 @@ Please follow the next steps:
          3. Example: ```1-BFS``` or ```5-Topological-Sort```
 
 
+## Lecture Planner Template
+
+| Number | Lecture | Topics |
+| ------ | ------- | ------ |
+| Number of session (3 weeks per unit) | Name according to CPCFI's Syllabus with link to the Github repository root directory | List according to the syllabus |
+
+**Example**:
+
+| Number | Lecture | Topics |
+| ------ | ------- | ------ |
+| 1  | [Graph Traversal I](https://github.com/CPCFI-org/lectures/tree/main/6-Graphs-I/Lecture1-GraphTraversal-I)  | 6.1.1 DFS, 6.1.2 BFS, 6.1.3 Connected Components, 6.1.4 Coloring Connected Components, 6.1.5 Topological Sort (Antecedents: checking for acyclicity), 6.1.6 Bipartite Graph Check, Extra: Kuhn's Algorithm for Maximum Bipartite Matching |
+
+
+
 ## Problems Table Template
 
-| Problem | Editorial | Section | 
+| Problem | Editorial | Section | 
 | ------- | --------- | ------- |
-| Link to the problem | Link to editorial (code or text) | Section within the unit's topics this problem belongs to |
+| Link to the problem | Link to editorial (code or text) | Section within the unit's topics this problem belongs to |
 
 
 **Example**:
