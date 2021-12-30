@@ -32,5 +32,4 @@ temp/*
 
 # Executables
 *.exe
-*.out
 *.app
