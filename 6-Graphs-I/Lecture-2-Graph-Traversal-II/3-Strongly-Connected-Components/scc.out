@@ -1,0 +1,7 @@
+Finding Strongly Connected Components - Kosaraju's and Sharir's algorithm
+roots = [0 0 0 3 4 3 4 7]
+root_nodes = [0 4 3 7]
+adj_scc = [[1 2 0] [ ] [ ] [5 3] [6 4] [ ] [ ] [7]]
+
+==================
+

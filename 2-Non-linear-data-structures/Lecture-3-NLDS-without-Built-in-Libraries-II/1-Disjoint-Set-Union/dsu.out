@@ -1,0 +1,30 @@
+Disjoint Set Union
+parent = [0 1 2 3 4 5 6 0]
+size_vec = [1 1 1 1 1 1 1 0]
+
+Performing UnionSet
+
+UnionSet(0, 1)
+	parent = [0 0 2 3 4 5 6 0]
+	size_vec = [2 1 1 1 1 1 1 0]
+UnionSet(1, 2)
+	parent = [0 0 0 3 4 5 6 0]
+	size_vec = [3 1 1 1 1 1 1 0]
+UnionSet(1, 3)
+	parent = [0 0 0 0 4 5 6 0]
+	size_vec = [4 1 1 1 1 1 1 0]
+UnionSet(2, 4)
+	parent = [0 0 0 0 0 5 6 0]
+	size_vec = [5 1 1 1 1 1 1 0]
+UnionSet(2, 5)
+	parent = [0 0 0 0 0 0 6 0]
+	size_vec = [6 1 1 1 1 1 1 0]
+UnionSet(4, 6)
+	parent = [0 0 0 0 0 0 0 0]
+	size_vec = [7 1 1 1 1 1 1 0]
+UnionSet(5, 7)
+	parent = [0 0 0 0 0 0 0 0]
+	size_vec = [7 1 1 1 1 1 1 0]
+
+==================
+

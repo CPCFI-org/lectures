@@ -1,0 +1,11 @@
+Checking for cycles in a directed graph
+Is DG1 acyclic?: False
+
+==================
+
+Finding a topological sort
+Is DG2 acyclic?: True
+topo_sort = [7 6 0 1 2 5 3 4]
+
+==================
+

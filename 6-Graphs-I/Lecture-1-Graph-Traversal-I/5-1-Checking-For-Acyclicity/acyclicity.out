@@ -1,0 +1,10 @@
+Checking for acyclicity in a Directed Graph
+Cycle found: 1 2 3 
+
+==================
+
+Checking for acyclicity in an Undirected Graph
+Cycle found: 1 2 3 4 5 
+
+==================
+

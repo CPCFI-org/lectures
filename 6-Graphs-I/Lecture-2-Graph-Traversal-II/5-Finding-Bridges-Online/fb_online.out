@@ -1,0 +1,46 @@
+Finding Bridges Online
+Adding edge (0,1)
+	Number of bridges: 1
+Adding edge (1,2)
+	Number of bridges: 2
+Adding edge (0,2)
+	Number of bridges: 0
+Adding edge (2,3)
+	Number of bridges: 1
+Adding edge (3,4)
+	Number of bridges: 2
+Adding edge (2,4)
+	Number of bridges: 0
+Adding edge (4,5)
+	Number of bridges: 1
+Adding edge (5,6)
+	Number of bridges: 2
+Adding edge (6,7)
+	Number of bridges: 3
+Adding edge (5,7)
+	Number of bridges: 1
+Adding edge (5,8)
+	Number of bridges: 2
+Adding edge (7,8)
+	Number of bridges: 1
+Adding edge (6,9)
+	Number of bridges: 2
+Adding edge (7,9)
+	Number of bridges: 1
+Adding edge (8,9)
+	Number of bridges: 1
+Adding edge (9,10)
+	Number of bridges: 2
+Adding edge (10,11)
+	Number of bridges: 3
+Adding edge (10,12)
+	Number of bridges: 4
+Adding edge (10,13)
+	Number of bridges: 5
+Adding edge (11,12)
+	Number of bridges: 3
+Adding edge (12,13)
+	Number of bridges: 2
+
+==================
+

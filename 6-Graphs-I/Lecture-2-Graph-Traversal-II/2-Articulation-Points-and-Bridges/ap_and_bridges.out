@@ -1,0 +1,19 @@
+Finding Articulation Points and Bridges
+curr_children = 3
+
+Articulation Points:
+Node 0
+Node 3
+Node 6
+Node 7
+
+Bridges:
+Edge (3,4)
+Edge (3,5)
+Edge (0,3)
+Edge (7,8)
+Edge (6,7)
+Edge (0,6)
+
+==================
+
