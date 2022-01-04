@@ -67,6 +67,6 @@ int main() {
     scanf("%d", &n);
     for (int i = 0; i < n; ++i) scanf("%d", t + n + i);
     build();
-    printf("%d\n", query(3, 11)); // [l,r)
+    printf("%d\n", query(3, 8+1)); // [l,r)
     return 0;
 }
