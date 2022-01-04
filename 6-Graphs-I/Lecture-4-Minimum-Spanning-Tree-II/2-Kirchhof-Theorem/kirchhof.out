@@ -1,0 +1,9 @@
+Kirchhof's Theorem for counting the number of spanning trees
+adj = [[0 1 1 0] [1 0 1 1] [1 1 0 1] [0 1 1 0]]
+deg_mat = [[2 0 0 0] [0 3 0 0] [0 0 3 0] [0 0 0 2]]
+L = [[2 -1 -1 0] [-1 3 -1 -1] [-1 -1 3 -1] [0 -1 -1 2]]
+cofactor = [[3 -1 -1] [-1 3 -1] [-1 -1 2]]
+Number of spanning trees in G: 18
+
+==================
+
