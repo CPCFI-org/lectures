@@ -32,121 +32,117 @@ void _debug(vector<T>& vec){
     _debug(vec[n-1]); cout << "]";
 }
 
+/*
+    + Lecture name: Second Best Minimum Spanning Tree
+    + CPCFI
+    + UNAM School of Engineering
+*/
 
-// ---------------------------------------------
-// Start coding here: Second Best Spanning Tree
-// ---------------------------------------------
+int n, m;
+vector<int> parent, rank_vec;
+vector<vector<int>> adj;
 
-struct edge {
-    int s, e, w, id;
-    bool operator<(const struct edge& other) { return w < other.w; }
+const int INF = 1e9;
+
+void make_set(int v) {
+    parent[v] = v;
+    rank_vec[v] = 0;
+}
+
+int find_set(int v) {
+    if (parent[v] == v) return v;
+    return parent[v] = find_set(parent[v]);
+}
+
+void union_sets(int a, int b) {
+    a = find_set(a);
+    b = find_set(b);
+    if (a != b) {
+        if (rank_vec[a] < rank_vec[b]) swap(a, b);
+        parent[b] = a;
+        if (rank_vec[a] == rank_vec[b]) rank_vec[a]++;
+    }
+}
+
+struct Edge {
+    int u, v, weight;
+    bool operator < (const Edge & other) {
+        return weight < other.weight;
+    }
+    bool operator == (const Edge & other) {
+        if (u == other.u && v == other.v && weight == other.weight) {
+            return true;
+        }
+        return false;
+    }
 };
-typedef struct edge Edge;
-const int N = 2e5 + 5;
-long long res = 0, ans = 1e18;
-int n, m, a, b, w, id, l = 21;
-vector<Edge> edges;
-vector<int> h(N, 0), parent(N, -1), size(N, 0), present(N, 0);
-vector<vector<pair<int, int>>> adj(N), dp(N, vector<pair<int, int>>(l));
-vector<vector<int>> up(N, vector<int>(l, -1));
 
-pair<int,int> combine(pair<int,int> a, pair<int,int> b) {
-    vector<int> v = {a.first, a.second, b.first, b.second};
-    int top_two = -3, top_one = -2;
-    for (auto c : v) {
-        if (c > top_one) {
-            top_two = top_one;
-            top_one = c;
-        } else if (c > top_two && c < top_one) {
-            top_two = c;
+vector<Edge> Kruskal(vector<Edge> edges, int& cost) {
+    parent.clear(); rank_vec.clear();
+    for (int i = 0; i < n; i++) {
+        make_set(i);
+    }
+    vector<Edge> mst;
+    cost = 0;
+    sort(edges.begin(), edges.end());
+    for (auto e : edges) {
+        if (find_set(e.u) != find_set(e.v)) {
+            cost += e.weight;
+            mst.push_back(e);
+            union_sets(e.u, e.v);
         }
     }
-    return {top_one, top_two};
+    return mst;
 }
 
-void dfs(int u, int par, int d) {
-    h[u] += 1 + h[par];
-    up[u][0] = par;
-    dp[u][0] = {d, -1};
-    for (auto v : adj[u]) {
-        if (v.first != par) {
-            dfs(v.first, u, v.second);
-        }
-    }
-}
-
-pair<int,int> lca(int u, int v) {
-    pair<int,int> ans = {-2, -3};
-    if (h[u] < h[v]) swap(u, v);
-    for (int i = l-1; i >= 0; i--) {
-        if (h[u] - h[v] >= (1 << i)) {
-            ans = combine(ans, dp[u][i]);
-            u = up[u][i];
-        }
-    }
-    if (u == v) return ans;
-    for (int i = l-1; i >= 0; i--) {
-        if (up[u][i] != -1 && up[v][i] != -1 && up[u][i] != up[v][i]) {
-            ans = combine(ans, combine(dp[u][i], dp[v][i]));
-            u = up[u][i];
-            v = up[v][i];
-        }
-    }
-    ans = combine(ans, combine(dp[u][0], dp[v][0]));
-    return ans;
-}
 
 int main() {
+    ios::sync_with_stdio(false); cin.tie(NULL);
     if (getenv("LOCAL")) { setIO(); }
-    printf("Finding the Second Best Spanning Tree using LCA approach\n");
     cin >> n >> m;
-    for (int i = 1; i <= n; i++) {
-        cin >> a >> b >> w; // should be 1-index
-        a++; b++;
-        edges.push_back({a, b, w, i-1});
+    parent.resize(n);
+    rank_vec.resize(n);
+    vector<Edge> edges;
+    for (int i = 0; i < m; i++) {
+        int u, v, weight;
+        cin >> u >> v >> weight;
+        edges.push_back({u,v,weight});
     }
-    // Kruskal
-    sort(edges.begin(), edges.end());
-    for (int i = 0; i <= m - 1; i++) {
-        a = edges[i].s;
-        b = edges[i].e;
-        w = edges[i].w;
-        id = edges[i].id;
-        if (unite_set(a, b)) {
-            adj[a].emplace_back(b, w);
-            adj[b].emplace_back(a, w);
-            present[id] = 1;
-            res += w;
-        }
+
+    // 1. Find MST using Kruskal's algorithm
+    int mst_cost = 0;
+    auto mst = Kruskal(edges, mst_cost);
+
+    cout << "MST cost = " << mst_cost << endl;
+    for (auto e : mst) {
+        cout << "(" << e.u << "," << e.v << ") - " << e.weight << endl;
     }
-    dfs(1, 0, 0);
-    for (int i = 1; i <= l - 1; i++) {
-        for (int j = 1; j <= n; ++j) {
-            if (up[j][i - 1] != -1) {
-                int v = up[j][i - 1];
-                up[j][i] = up[v][i - 1];
-                dp[j][i] = combine(dp[j][i - 1], dp[v][i - 1]);
+    cout << endl;
+    
+    // 2. Find Second Best MST with lowest weight
+    int second_mst_cost = INF;
+    vector<Edge> second_mst;
+    for (auto e : mst) {
+        vector<Edge> temp;
+        for (auto curr : edges) {
+            if (curr == e) {
+                continue;
+            } else {
+                temp.push_back(curr);
             }
         }
-    }
-    for (int i = 0; i <= m - 1; i++) {
-        id = edges[i].id;
-        w = edges[i].w;
-        if (!present[id]) {
-            auto rem = lca(edges[i].s, edges[i].e);
-            if (rem.first != w) {
-                if (ans > res + w - rem.first) {
-                    ans = res + w - rem.first;
-                }
-            } else if (rem.second != -1) {
-                if (ans > res + w - rem.second) {
-                    ans = res + w - rem.second;
-                }
-            }
+        int temp_cost = 0;
+        auto temp_mst = Kruskal(temp, temp_cost);
+        if (temp_cost < second_mst_cost) {
+            second_mst_cost = temp_cost;
+            second_mst = temp_mst;
         }
     }
-    cout << ans << "\n";
-    return 0;
-    Clean();
+
+    cout << "Second MST cost=" << second_mst_cost << endl;
+    for (auto e : second_mst) {
+        printf("(%d,%d) - %d\n", e.u, e.v, e.weight);
+    }
+
     return 0;
 }
