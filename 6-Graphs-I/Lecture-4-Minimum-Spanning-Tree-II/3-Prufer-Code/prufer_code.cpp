@@ -89,13 +89,14 @@ vector<pair<int, int>> PruferDecode(vector<int> const& code) {
 	
 	// 2. Find first leaf
 	int ptr = 0;
-	while (degree[ptr] != 1) ptr++;
+	while (degree[ptr] != 1) 
+		ptr++;
 	int leaf = ptr;
 	
 	// 3. Restore code into tree
 	vector<pair<int, int>> tree;
 	for (auto v : code) {
-		tree.push_back({leaf, v});
+		tree.emplace_back(leaf, v);
 		
 		// Find next leaf
 		if (--degree[v] == 1 && v < ptr) leaf = v;
@@ -105,6 +106,7 @@ vector<pair<int, int>> PruferDecode(vector<int> const& code) {
 			leaf = ptr;	
 		}
 	}
+	tree.emplace_back(leaf, n-1);
 	return tree;
 }	
 
