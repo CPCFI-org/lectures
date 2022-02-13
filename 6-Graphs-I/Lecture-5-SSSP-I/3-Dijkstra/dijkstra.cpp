@@ -16,9 +16,9 @@ void setIO(){
     + UNAM's School of Engineering
 */
 
-const int INF = 1000000000;
+const long long INF = 1e18;
 
-void Dijkstra(int source, vector<int> &D, vector<int> &P, 
+void Dijkstra(int source, vector<long long> &D, vector<int> &P, 
     const vector<vector<pair<int, int>>> adj) {
     
     int n = adj.size();
@@ -29,7 +29,7 @@ void Dijkstra(int source, vector<int> &D, vector<int> &P,
     D[source] = 0;
     Q.insert({0, source}); // {distance, node} // Q.push({0, source});
     while (!Q.empty()) {
-        int v = Q.begin()->second; // Q.top().second;
+        auto v = Q.begin()->second; // Q.top().second;
         // int d_v = Q.top().first;
         Q.erase(Q.begin()); // Q.pop();
 
@@ -38,8 +38,8 @@ void Dijkstra(int source, vector<int> &D, vector<int> &P,
         */
 
         for (auto e : adj[v]) {
-            int to = e.first;
-            int weight = e.second;
+            auto to = e.first;
+            auto weight = e.second;
 
             if (D[v] + weight < D[to]) {
                 Q.erase({D[to], to});
@@ -52,7 +52,7 @@ void Dijkstra(int source, vector<int> &D, vector<int> &P,
 }
 
 vector<int> SSSP(int source, int target, const vector<int> &P, 
-    const vector<int> &D) {
+    const vector<long long> &D) {
     if (D[target] == INF) return {};
 
     vector<int> path;
@@ -84,7 +84,8 @@ int main() {
     int source = 2;
     int target = 4;
 
-    vector<int> D, P; // D: distance, P: predecessor
+    vector<long long> D; // D: distance
+    vector<int> P; // P: predecessor
     Dijkstra(source, D, P, adj);
 
     auto path = SSSP(source, target, P, D);
