@@ -17,4 +17,4 @@
 
 ---
 
-**Note for CPCFI's professors**: please read [NewLectures.md](https://github.com/CPCFI-org/lectures/blob/main/NewLectures.md) file before adding or modyfing any lecture's topic organization.
+**Note for CPCFI's professors**: please read [NewLectures.md](https://github.com/CPCFI-org/lectures/blob/main/NewLectures.md) file before adding or modifying any lecture's topic organization.
