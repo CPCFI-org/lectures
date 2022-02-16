@@ -3,7 +3,7 @@ using namespace std;
 
 #define debug(x)                    cout << #x << " = "; _debug(x); cout << endl;
 
-void setIO(){
+void setIO() {
     string file = __FILE__;
     file = string(file.begin(), file.end()-3);
     string in_file = file+"in";
@@ -17,12 +17,12 @@ void Clean() {
 }
 
 template <typename T>
-void _debug(T& x){
+void _debug(T& x) {
     cout << x;
 }
 
 template <typename T>
-void _debug(vector<T>& vec){
+void _debug(vector<T>& vec) {
     int n = vec.size();
     if(n == 0){cout << "[ ]"; return;}
     cout << "[";
@@ -50,35 +50,39 @@ void DFS(int u) {
 	}
 }
 
-vector<int> PruferCode() {
-	// 1. Assign necessary variables
-	parent.assign(n, -1);
+vector<int> PruferCode(const vector<vector<int>> & adj) {
+	// 1. Find the parent of each node
+	parent.resize(n);
+	parent[n-1] = -1;
+	DFS(n-1); // should we check for connected components?
+
+	// 2. Find the first smallest leaf
 	int ptr = -1;
-	
-	// 2. Compute the degree for each vertex and find leaf
-	vector<int> degree;
-	degree.resize(n);
+	vector<int> degree(n);
 	for (int i = 0; i < n; i++) {
 		degree[i] = adj[i].size();
-		if (degree[i] == 1) ptr = i;
+		if (degree[i] == 1 && ptr == -1) {
+			ptr = i;
+		}
 	}
-	
-	// 3. Calculate Prufer Code
-	vector<int> code(n);
-	int leaf = ptr;
-	for (int i = 0; i < n-2; i++) {
-		code[i] = parent[leaf];
-		
-		// 4. Find next leaf
-		if (--degree[next] == 1 && next < ptr) {
-				leaf = next;
-		} else {
-			ptr++;
-			while (degree[ptr] != -1) ptr++;
-			leaf = ptr;
-		}	
-	}
-	return code;
+
+	// 3. Build Prufer Code
+	vector<int> code(n - 2);
+    int leaf = ptr;
+    for (int i = 0; i < n - 2; i++) {
+        int next = parent[leaf];
+        code[i] = next;
+        if (--degree[next] == 1 && next < ptr) {
+            leaf = next;
+        } else {
+            ptr++;
+            while (degree[ptr] != 1)
+                ptr++;
+            leaf = ptr;
+        }
+    }
+
+    return code;
 }
 
 vector<pair<int, int>> PruferDecode(vector<int> const& code) {
@@ -111,25 +115,26 @@ vector<pair<int, int>> PruferDecode(vector<int> const& code) {
 }	
 
 int main() {
-  	if (getenv("LOCAL")) { setIO();
+  	if (getenv("LOCAL")) setIO();
     printf("Prufer code - Building\n");
     cin >> n >> m;
     adj.resize(n);
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < m; i++) {
       int a, b;
       cin >> a >> b;
+	  a--; b--;
       adj[a].push_back(b);
       adj[b].push_back(a);
     }
-    auto prufer_code = PruferCode();
-    for (auto e : prufer_code) cout << e << " ";
+
+    auto prufer_code = PruferCode(adj);
+    for (auto e : prufer_code) cout << e+1 << " ";
     cout << endl;
     Clean();
 
     printf("Prufer Code - Restoration\n");
-    auto tree = PruferDecode(code);
-    for (auto u : tree) cout << u.first << " - " << u.second << " ";
-    cout << endl;
+    auto tree = PruferDecode(prufer_code);
+    for (auto u : tree) cout << u.first+1 << " - " << u.second+1 << endl;
     Clean();
     return 0;	
 }
