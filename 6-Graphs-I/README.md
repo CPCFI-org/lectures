@@ -13,7 +13,7 @@ In this unit we'll see basic and intermediate concepts regarding Graph Theory. F
 | 3  | [Minimum Spanning Tree I](https://github.com/CPCFI-org/lectures/tree/main/6-Graphs-I/Lecture-3-Minimum-Spanning-Tree-I) | 6.2.1 Prim's Algorithm, 6.2.2 Kruskal's Algorithm, 6.2.3 Kruskal with Disjoint Set Union |
 | 4  | [Minimum Spanning Tree II](https://github.com/CPCFI-org/lectures/tree/main/6-Graphs-I/Lecture-4-Minimum-Spanning-Tree-II)  |  6.2.4 Other Applications (Second Best Spanning Tree), Extra: Kirchhoff Theorem, Prüfer code |
 | 5  | [Single-Source Shortest Paths I](https://github.com/CPCFI-org/lectures/tree/main/6-Graphs-I/Lecture-5-SSSP-I) | 6.3.1 SSSP on Unweighted Graph, 6.3.2 SSSP on Weighted Graph, Extra: Dijkstra, Dijkstra on sparse graphs  |
-| 6  | Single-Source Shortest Paths II | 6.3.3 SSSP on Graph with Negative Weights, Extra: Bellman-Ford algorithm, 0-1 BFS, D'Escopo-Pape algorithm |
+| 6  | [Single-Source Shortest Paths II](https://github.com/CPCFI-org/lectures/tree/main/6-Graphs-I/Lecture-6-SSSP-II) | 6.3.3 SSSP on Graph with Negative Weights, Extra: Bellman-Ford algorithm, 0-1 BFS, D'Escopo-Pape algorithm |
 
 
 ## References
