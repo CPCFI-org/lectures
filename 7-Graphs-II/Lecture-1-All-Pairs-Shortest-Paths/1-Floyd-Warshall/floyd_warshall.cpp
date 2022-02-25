@@ -87,7 +87,7 @@ void _debug(vector<vector<T>>& A){
 
 template <typename T>
 void print(T& x){
-    cout << x << endl;
+    cout << x;
     return;
 }
 
@@ -96,51 +96,78 @@ void print(vector<T>& vec, int a=0, int b=-1){
     if(b == -1){b = sz(vec);}
     if(b == 0){return;}
     FOR(i, a, b-1){
-        cout << vec[i] << " ";
+        print(vec[i]); cout << " ";
     }
-    cout << vec[b-1] << endl;
+    print(vec[b-1]); cout << endl;
     return; 
 }
-
-
-#include <bits/stdc++.h>
-using namespace std;
 
 const int N = 1e5;
 
 void solve(){
-    int n;
-    cin >> n; 
-    vector<int> par(n);
-    FO(i, n){
-        cin >> par[i];
+    int n; cin >> n;
+    vector<vector<int>> adj(n+1, vector<int>(n+1, INF));
+    int m; cin >> m;
+    int u, v, w;
+    FO(i, m){
+        cin >> u >> v >> w;
+        adj[u][v] = w;
     }
 
-    int LOG = 20;
-    vector<vector<int>> up(n, vector<int>(LOG, 0));
-
-    for(int v = 0; v < n; v++){
-        up[v][0] = par[v];
-    }
-    for(int j = 1; j < LOG; j++){
-        for(int v=0; v < n; v++){
-            up[v][j] = up[up[v][j-1]][j-1];
+    vector<vector<int>> d(n+1, vector<int>(n+1, 0));
+    vector<vector<int>> p(n+1, vector<int>(n+1, 0));
+    FOR(i, 1, n+1){
+        FOR(j, 1, n+1){
+            d[i][j] = adj[i][j];
+            p[i][j] = i;
         }
     }
-    int q; cin >> q;
-    FO(i, q){
-        int x, k;
-        cin >> x >> k;
-        cout << "x=" << x << " " << "k=" << k << endl;
-        for(int j = 0; j < LOG; j++){
-            if (k & (1 << j)){
-                x = up[x][j];
+    
+    FOR(k, 1, n+1){
+        FOR(i, 1, n+1){
+            FOR(j, 1, n+1){
+                if(d[i][k]+d[k][j] < d[i][j]){
+                    d[i][j] = d[i][k]+d[k][j];
+                    p[i][j] = p[k][j]; 
+                }
             }
         }
-        cout << "kth acestor of x:" << x << endl;
-        cout << endl;
     }
-    return;
+    
+    // find negative cycle
+    bool neg_cycle = false;
+    FOR(i, 1, n+1){
+        if (d[i][i] < 0){
+            neg_cycle = true;
+            break;
+        }
+    }
+    cout << "has negative cycle: " << neg_cycle << endl; 
+    
+    // // find diameter
+    // int diameter = 0;
+    // FOR(i, 1, n+1){
+    //     FOR(j, 1, n+1){
+    //         if(d[i][j] != INF){
+    //             diameter = max(diameter, d[i][j]);
+    //         }
+    //     }
+    // }
+    // cout << "graph diameter: " << diameter << endl;
+
+    // recover path
+    int start = 2;
+    int target = 4;
+    int curr = target;
+    vector<int> path;
+    while (curr != start){
+        path.pb(curr);
+        curr = p[start][curr];
+    }
+    path.pb(start);
+    reverse(all(path));
+    cout << "path from " << start << " to " << target << ": ";
+    print(path);
 }
 
 int main()

@@ -4,6 +4,6 @@ kth acestor of x:7
 x=9 k=5
 kth acestor of x:0
 
-x=10 k=5
-kth acestor of x:10
+x=10 k=1000
+kth acestor of x:0
 
