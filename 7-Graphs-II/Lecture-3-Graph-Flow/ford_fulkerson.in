@@ -1,0 +1,21 @@
+6 9
+S A 10
+S C 10
+A C 2
+A D 8
+A B 4
+B T 10
+C D 9
+D B 6
+D T 10
+
+6 9 
+S A 7
+S D 4
+A C 3
+A B 5
+B T 8
+C B 3 
+C T 5 
+D C 2
+D A 3
