@@ -143,7 +143,7 @@ struct Dinic{
             int v = q.front();
             q.pop();
             for (int id : adj[v]) {
-                if (edges[id].cap - edges[id].flow < 1)
+                if (edges[id].cap - edges[id].flow <= 0)
                     continue;
                 if (level[edges[id].u] != -1)
                     continue;
@@ -162,7 +162,7 @@ struct Dinic{
         for (int& cid = ptr[v]; cid < (int)adj[v].size(); cid++) {
             int id = adj[v][cid];
             int u = edges[id].u;
-            if (level[v] + 1 != level[u] || edges[id].cap - edges[id].flow < 1)
+            if (level[v] + 1 != level[u] || edges[id].cap - edges[id].flow <= 0)
                 continue;
             long long tr = dfs(u, min(pushed, edges[id].cap - edges[id].flow));
             if (tr == 0)
@@ -185,7 +185,7 @@ struct Dinic{
             fill(ptr.begin(), ptr.end(), 0);
             while (long long pushed = dfs(s, flow_inf)) {
                 f += pushed;
-            }
+            }               
         }
         return f;
     }
