@@ -1,4 +1,4 @@
-# # Computational Geometry II
+# Computational Geometry II
 
 | Problem | Editorial | Section |
 | ------- | --------- | ------- |
