@@ -1,0 +1,12 @@
+s=abc
+hash(s)=2946
+Group #1
+	aa at idx=1
+	aa at idx=5
+Group #2
+	bc at idx=2
+Group #3
+	aaa at idx=4
+Group #4
+	abc at idx=0
+	abc at idx=3
