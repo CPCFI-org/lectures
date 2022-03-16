@@ -1,0 +1,12 @@
+s= A A A A A 
+Z= 0 4 3 2 1 
+
+s= A A C B A C C A 
+Z= 0 1 0 0 1 0 0 1 
+
+s= A B A C A B A 
+Z= 0 0 1 0 3 0 1 
+
+s= A B C D E 
+Z= 0 0 0 0 0 
+
