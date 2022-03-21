@@ -8,10 +8,10 @@ For each lecture, you will find a PDF with written notes describing the main con
 
 | Number | Lecture | Topics |
 | ------ | ------- | ------ |
-| 1 | All-Pairs Shortest Paths| 7.1.1 Floyd-Warshall, 7.1.2 Other Applications |
-| 2 | Lowest Common Ancestor | 7.3.1 Lowest Common Ancestor, 7.3.2 Binary Lifting |
-| 3 | Network Flow | 7.4.1 Ford-Fulkerson's algorithm, 7.4.2 Edmonds Karp's algorithm, 7.4.3 Dinic's algorithm, 7.4.4 Minimum-cost flow, 7.4.5 Assignment problem |
-| 5 | Other Topics | 7.6.1 Edge/Vertex Connectivity, 7.6.2 2-SAT |
+| 1 | [All-Pairs Shortest Paths](https://github.com/CPCFI-org/lectures/tree/main/7-Graphs-II/Lecture-1-All-Pairs-Shortest-Paths) | 7.1.1 Floyd-Warshall, 7.1.2 Other Applications |
+| 2 | [Lowest Common Ancestor](https://github.com/CPCFI-org/lectures/tree/main/7-Graphs-II/Lecture-2-Lowest-Common-Ancestor) | 7.2.1 Lowest Common Ancestor, 7.2.2 Binary Lifting |
+| 3 | [Network Flow](https://github.com/CPCFI-org/lectures/tree/main/7-Graphs-II/Lecture-3-Network-Flow) | 7.3.1 Ford-Fulkerson's algorithm, 7.3.2 Edmonds Karp's algorithm, 7.3.3 Dinic's algorithm, 7.3.4 Minimum-cost flow, 7.3.5 Assignment problem |
+| 4 | [Other Topics](https://github.com/CPCFI-org/lectures/tree/main/7-Graphs-II/Lecture-4-Other-Topics) | 7.4.1 Edge/Vertex Connectivity, 7.4.2 2-SAT |
 
 
 ## References
