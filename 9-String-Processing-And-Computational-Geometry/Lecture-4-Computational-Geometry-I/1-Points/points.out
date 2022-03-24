@@ -1,0 +1,30 @@
+Unsorted points:
+(3,4)
+(1,2)
+(6,6)
+(0,0)
+(0,0)
+
+Sorted points:
+(0,0)
+(0,0)
+(1,2)
+(3,4)
+(6,6)
+
+Checking if two points are equal: 
+1
+
+Euclidean distance between two points
+5
+
+Dot product properties:
+P1=(0,3) P2=(6,0)
+
+Dot product : 0
+Norm of A : 9
+Length of A : 3
+Proj of A onto B : 0
+Angle between A and B : 90
+
+Cross product between A and B : -18
