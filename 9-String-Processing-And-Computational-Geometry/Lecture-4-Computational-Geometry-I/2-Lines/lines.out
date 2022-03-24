@@ -1,0 +1,9 @@
+Line from two points: -1x + 1y + 0
+L1 and L2 parallel : 1
+l1 and l2 intersect at (0,4)
+
+Shortest distance between point p and line l
+distance = 1.78885
+
+Check if point is left/hand side of line l
+	p, q and r are collinear
