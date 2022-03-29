@@ -2,3 +2,31 @@ Perimeter of polygon: 19.2175
 Area of polygon: 21
 Is polygon convex? 1
 Point pt=(1,1) inside polygon? 1
+
+Cutting polygon on points a and b
+(4,4)
+(0,0)
+(-2,2)
+(4,4)
+
+Finding convex hull of P:
+P points:
+(0,0)
+(5,1)
+(3,2)
+(4,3)
+(3,5)
+(1,4)
+(0,6)
+(-1,7)
+(-2,4)
+(-2,3)
+(-3,3)
+(-5,2)
+CH(P) points:
+(-5,2)
+(0,0)
+(5,1)
+(3,5)
+(-1,7)
+(-5,2)

@@ -104,6 +104,81 @@ bool inside_polygon(const vector<point> & p, const point & pt) {
     return fabs(fabs(sum) - 2*PI) < EPS;
 }
 
+point line_intersect_seg(point p, point q, point A, point B) {
+    double a = B.y - A.y;
+    double b = A.x - B.x;
+    double c = B.x * A.y - A.x + B.y;
+    double u = fabs(a * p.x + b * p.y + c);
+    double v = fabs(a * q.x + b * q.y + c);
+    return point((p.x*v + q.x*u) / (u+v), (p.y*v + q.y*u) / (u+v));
+}
+
+vector<point> cut_polygon(point a, point b, const vector<point> & p) {
+    vector<point> new_polygon;
+    for (int i = 0; i < (int) p.size(); i++) {
+        double left1 = cross(toVec(a, b), toVec(a, p[i])), left2 = 0;
+        if (i != (int) p.size()-1) {
+            left2 = cross(toVec(a, b), toVec(a, p[i+1]));
+        }
+        if (left1 > -EPS) {
+            new_polygon.push_back(p[i]);
+        }
+        if (left1 * left2 < -EPS) {
+            new_polygon.push_back(line_intersect_seg(p[i], p[i+1], a, b));
+        }
+    }
+    
+    if (!new_polygon.empty() && !(new_polygon.back() == new_polygon.front())) {
+        new_polygon.push_back(new_polygon.front());
+    }
+
+    return new_polygon;
+}
+
+// Graham Scan algorithm for finding Convex Hull of a set of points P
+bool collinear(point p, point q, point r) {
+    return fabs(cross(toVec(p, q), toVec(p, r))) < EPS; 
+}
+
+point pivot;
+bool angleCmp(point a, point b) {                 // angle-sorting function
+    if (collinear(pivot, a, b))                               // special case
+        return dist(pivot, a) < dist(pivot, b);    // check which one is closer
+    double d1x = a.x - pivot.x, d1y = a.y - pivot.y;
+    double d2x = b.x - pivot.x, d2y = b.y - pivot.y;
+    return (atan2(d1y, d1x) - atan2(d2y, d2x)) < 0;    // compare two angles
+}
+
+vector<point> CH(vector<point> P) {   // the content of P may be reshuffled
+    int i, j, n = (int)P.size();
+    if (n <= 3) {
+        if (!(P[0] == P[n-1])) P.push_back(P[0]); // safeguard from corner case
+        return P;                           // special case, the CH is P itself
+    }
+
+    // first, find P0 = point with lowest Y and if tie: rightmost X
+    int P0 = 0;
+    for (i = 1; i < n; i++)
+        if (P[i].y < P[P0].y || (P[i].y == P[P0].y && P[i].x > P[P0].x))
+        P0 = i;
+
+    point temp = P[0]; P[0] = P[P0]; P[P0] = temp;    // swap P[P0] with P[0]
+
+    // second, sort points by angle w.r.t. pivot P0
+    pivot = P[0];                    // use this global variable as reference
+    sort(++P.begin(), P.end(), angleCmp);              // we do not sort P[0]
+
+    // third, the ccw tests
+    vector<point> S;
+    S.push_back(P[n-1]); S.push_back(P[0]); S.push_back(P[1]);   // initial S
+    i = 2;                                         // then, we check the rest
+    while (i < n) {           // note: N must be >= 3 for this method to work
+        j = (int)S.size()-1;
+        if (ccw(S[j-1], S[j], P[i])) S.push_back(P[i++]);  // left turn, accept
+        else S.pop_back(); }   // or pop the top of S until we have a left turn
+    return S; 
+}    
+
 int main() {
     ios::sync_with_stdio(false); cin.tie(NULL);
     if(getenv("LOCAL")){setIO();}
@@ -126,6 +201,33 @@ int main() {
     point pt = {1,1};
 
     cout << "Point pt=(" << pt.x << "," << pt.y << ") inside polygon? " << inside_polygon(polygon, pt) << endl;
+
+    cout << "\nCutting polygon on points a and b" << endl; 
+    auto new_polygon = cut_polygon({0,0}, {4,4}, polygon);
+    for (auto p : new_polygon) {
+        cout << "(" << p.x << "," << p.y << ")" << endl;
+    }
+
+    cout << "\nFinding convex hull of P:" << endl;
+
+    cin >> n;
+    vector<point> p;
+    while (n--) {
+        double u, v;
+        cin >>u >> v;
+        p.push_back({u,v});
+    }
+
+    cout << "P points:" << endl;
+    for (auto p : p) {
+        cout << "(" << p.x << "," << p.y << ")" << endl;
+    }
+
+    cout << "CH(P) points:" << endl;
+    auto convex_hull = CH(p);
+    for (auto p : convex_hull) {
+        cout << "(" << p.x << "," << p.y << ")" << endl;
+    }
 
     return 0;
 }
