@@ -1,7 +1,9 @@
 Finding intersecting line segments of:
-Id=1	(1,10) (10,1)
-Id=2	(0,0) (5,3)
-Id=3	(2,7) (4,10)
+Id=1	(-3,4) (0,2)
+Id=2	(0,0) (4,3)
+Id=3	(2,4) (5,-1)
+Id=4	(-3,0) (0,8)
+Id=5	(-5,3) (8,-1)
 
 Intersecting segments
-1 2
+5 3
